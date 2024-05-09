@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    max-width: fit-content;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.enfant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+    background-color: orange;
+}
+
+.tablet, .desktop {
+    display: none;
+}
+
+img {
+    height: 30rem;
+}
+
+/*tablette*/
+@media screen and (min-width: 768px){
+    .parent {
+        flex-wrap: wrap;
+        flex-direction: row;
+        max-width: 31rem;
+        justify-content: center;
+    }
+
+    .tablet {
+        display: inline;
+    }
+
+    .mobile, .desktop {
+        display: none;
+    }
+
+}
+
+/*desktop*/
+@media screen and (min-width: 1024px){
+    .parent {
+        display: flex;
+        flex-direction: row;
+        max-width: fit-content;
+    }
+
+    .desktop {
+        display: inline-block;
+    }
+
+    .mobile, .tablet {
+        display: none;
+    }
+}
